@@ -1,0 +1,32 @@
+//
+// Prefix header for all source files of the 'Sweepstakes' target in the 'Sweepstakes' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+//#define API_PATH @"http://192.168.1.100/apps/sweep/api"
+//#define IMGPATH @"http://192.168.1.100/apps/sweep/"
+#define API_PATH @"http://sweepstakesapp.com/api"
+#define IMGPATH @"http://sweepstakesapp.com/"
+
+
+#define Twiiter_ConsumerKey @"07ky0EIHVg6M7J2fo9D7uQ"
+#define Twiiter_ConsumerSecretKey @"lYBVmE6AWojQHgt1G6rIfWHOlwiifjOAgtPhskF4Sus"
+//#define Facebook_id @"372084682874416"
+#define Facebook_id @"160462220776575"
+
+//#define SPONSORPAY_API_KEY @"c2732013599a043f3c20f91aaf6cc614"
+#define SPONSORPAY_API_KEY @"32f7be926baeb57911b957daa5369ca6a3d12041"
+
+#define GoogleShareid @"782020919018.apps.googleusercontent.com"
+
+#define DELEGATE ((AppDelegate*)[[UIApplication sharedApplication]delegate])
+#endif
