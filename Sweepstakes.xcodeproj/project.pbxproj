@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		391B3C6C1709AADF0069E6CC /* libvunglepub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 391B3C5C1709AADF0069E6CC /* libvunglepub.a */; };
+		391B3C6C1709AADF0069E6CC /* libvunglepub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 391B3C5C1709AADF0069E6CC /* libvunglepub.a */; settings = {ATTRIBUTES = (Weak, ); }; };
 		391B3C6D1709AADF0069E6CC /* vunglepubsdk.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 391B3C5E1709AADF0069E6CC /* vunglepubsdk.markdown */; };
 		391B3C6E1709AADF0069E6CC /* vg_button_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 391B3C681709AADF0069E6CC /* vg_button_close.png */; };
 		391B3C6F1709AADF0069E6CC /* vg_button_mute_plain.png in Resources */ = {isa = PBXBuildFile; fileRef = 391B3C691709AADF0069E6CC /* vg_button_mute_plain.png */; };
@@ -505,6 +505,11 @@
 		9070276916F1D36C00182254 /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = 9070275516F1D36C00182254 /* image.png */; };
 		9070276A16F1D36C00182254 /* image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9070275616F1D36C00182254 /* image@2x.png */; };
 		9070276B16F1D36C00182254 /* Screen Shot 2013-03-13 at 8.12.27 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 9070275716F1D36C00182254 /* Screen Shot 2013-03-13 at 8.12.27 PM.png */; };
+		9D0D87151720BDA400C1B055 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D0D87141720BDA400C1B055 /* Parse.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		9D0D87181720BDC500C1B055 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D0D87171720BDC500C1B055 /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		9D0D871A1720BDDC00C1B055 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D0D87191720BDDC00C1B055 /* SenTestingKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		9D0D871C1720BDE600C1B055 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D0D871B1720BDE600C1B055 /* libz.1.1.3.dylib */; };
+		9D0D871E1720BDEF00C1B055 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D0D871D1720BDEF00C1B055 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		BE398FA016FB10FF00166098 /* winners_list_header.png in Resources */ = {isa = PBXBuildFile; fileRef = BE398F9E16FB10FF00166098 /* winners_list_header.png */; };
 		BE398FA116FB10FF00166098 /* winners_list_header@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE398F9F16FB10FF00166098 /* winners_list_header@2x.png */; };
 		BE398FA516FB134700166098 /* menu_open.png in Resources */ = {isa = PBXBuildFile; fileRef = BE398FA316FB134700166098 /* menu_open.png */; };
@@ -1278,6 +1283,11 @@
 		9070275516F1D36C00182254 /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
 		9070275616F1D36C00182254 /* image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image@2x.png"; sourceTree = "<group>"; };
 		9070275716F1D36C00182254 /* Screen Shot 2013-03-13 at 8.12.27 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2013-03-13 at 8.12.27 PM.png"; sourceTree = "<group>"; };
+		9D0D87141720BDA400C1B055 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../../../../../Data Disk 2/Parse.com SDKs/Parse.framework"; sourceTree = "<group>"; };
+		9D0D87171720BDC500C1B055 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		9D0D87191720BDDC00C1B055 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		9D0D871B1720BDE600C1B055 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
+		9D0D871D1720BDEF00C1B055 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		BE398F9E16FB10FF00166098 /* winners_list_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = winners_list_header.png; sourceTree = "<group>"; };
 		BE398F9F16FB10FF00166098 /* winners_list_header@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "winners_list_header@2x.png"; sourceTree = "<group>"; };
 		BE398FA316FB134700166098 /* menu_open.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_open.png; sourceTree = "<group>"; };
@@ -1347,6 +1357,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D0D871E1720BDEF00C1B055 /* Social.framework in Frameworks */,
+				9D0D871C1720BDE600C1B055 /* libz.1.1.3.dylib in Frameworks */,
+				9D0D871A1720BDDC00C1B055 /* SenTestingKit.framework in Frameworks */,
+				9D0D87181720BDC500C1B055 /* Accounts.framework in Frameworks */,
+				9D0D87151720BDA400C1B055 /* Parse.framework in Frameworks */,
 				BE398FB016FB1CEE00166098 /* CoreLocation.framework in Frameworks */,
 				74445B1D16C2A4060065F201 /* CoreMedia.framework in Frameworks */,
 				39851A3B17071A350000EAF0 /* AudioToolbox.framework in Frameworks */,
@@ -2293,6 +2308,11 @@
 		7CCC441F15F4909D001A0E09 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9D0D871D1720BDEF00C1B055 /* Social.framework */,
+				9D0D871B1720BDE600C1B055 /* libz.1.1.3.dylib */,
+				9D0D87191720BDDC00C1B055 /* SenTestingKit.framework */,
+				9D0D87171720BDC500C1B055 /* Accounts.framework */,
+				9D0D87141720BDA400C1B055 /* Parse.framework */,
 				39851A3A17071A350000EAF0 /* AudioToolbox.framework */,
 				BE398FB116FB1DA000166098 /* MapKit.framework */,
 				BE398FAF16FB1CEE00166098 /* CoreLocation.framework */,
@@ -3413,8 +3433,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Prize Per Day";
-				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Distribution: Prize Per Day";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Gaurav Goyal (345548CA2J)";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: Gaurav Goyal (345548CA2J)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -3430,8 +3450,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				PROVISIONING_PROFILE = "E6EB127F-BB53-4E51-8DAA-094B4F6CC3B4";
-				"PROVISIONING_PROFILE[sdk=*]" = "E6EB127F-BB53-4E51-8DAA-094B4F6CC3B4";
+				PROVISIONING_PROFILE = "881F0958-ED1C-43C4-B298-4A67396F5F19";
+				"PROVISIONING_PROFILE[sdk=*]" = "881F0958-ED1C-43C4-B298-4A67396F5F19";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -3441,8 +3461,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Prize Per Day";
-				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Distribution: Prize Per Day";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Gaurav Goyal (345548CA2J)";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: Gaurav Goyal (345548CA2J)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -3452,8 +3472,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "E6EB127F-BB53-4E51-8DAA-094B4F6CC3B4";
-				"PROVISIONING_PROFILE[sdk=*]" = "E6EB127F-BB53-4E51-8DAA-094B4F6CC3B4";
+				PROVISIONING_PROFILE = "881F0958-ED1C-43C4-B298-4A67396F5F19";
+				"PROVISIONING_PROFILE[sdk=*]" = "881F0958-ED1C-43C4-B298-4A67396F5F19";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -3463,14 +3483,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Sweepstakes/Sweepstakes.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Souvik Ghosh";
-				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: Souvik Ghosh (67X8DA63MQ)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Souvik Ghosh (67X8DA63MQ)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Gaurav Goyal (345548CA2J)";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: Gaurav Goyal (345548CA2J)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Gaurav Goyal (345548CA2J)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 					"\"$(SRCROOT)/Sweepstakes\"",
 					"\"$(SRCROOT)/Sweepstakes/Resourse\"",
+					"\"$(SRCROOT)/../../../../../Data Disk 2/Parse.com SDKs\"",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
 				);
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -3496,14 +3518,15 @@
 				);
 				LLVM_LTO = NO;
 				New_Setting = "";
+				ORDER_FILE = "";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9139CA17-336B-4E5E-B116-D049D2D5B5AC";
-				"PROVISIONING_PROFILE[sdk=*]" = "248643D6-AA64-41BB-8717-48D5616F8BE4";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "248643D6-AA64-41BB-8717-48D5616F8BE4";
+				PROVISIONING_PROFILE = "881F0958-ED1C-43C4-B298-4A67396F5F19";
+				"PROVISIONING_PROFILE[sdk=*]" = "881F0958-ED1C-43C4-B298-4A67396F5F19";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "881F0958-ED1C-43C4-B298-4A67396F5F19";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv6 armv7";
 				WRAPPER_EXTENSION = app;
@@ -3514,14 +3537,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Sweepstakes/Sweepstakes.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Souvik Ghosh";
-				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Distribution: Souvik Ghosh";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos6.1]" = "iPhone Distribution: Souvik Ghosh";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Gaurav Goyal (345548CA2J)";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: Gaurav Goyal (345548CA2J)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos6.1]" = "iPhone Developer: Gaurav Goyal (345548CA2J)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 					"\"$(SRCROOT)/Sweepstakes\"",
 					"\"$(SRCROOT)/Sweepstakes/Resourse\"",
+					"\"$(SRCROOT)/../../../../../Data Disk 2/Parse.com SDKs\"",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
 				);
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -3547,14 +3572,14 @@
 				);
 				LLVM_LTO = NO;
 				New_Setting = "";
+				ORDER_FILE = "";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9139CA17-336B-4E5E-B116-D049D2D5B5AC";
-				"PROVISIONING_PROFILE[sdk=*]" = "235D71F5-B2FD-41FB-8517-E8D310108736";
-				"PROVISIONING_PROFILE[sdk=iphoneos6.1]" = "235D71F5-B2FD-41FB-8517-E8D310108736";
+				PROVISIONING_PROFILE = "881F0958-ED1C-43C4-B298-4A67396F5F19";
+				"PROVISIONING_PROFILE[sdk=iphoneos6.1]" = "881F0958-ED1C-43C4-B298-4A67396F5F19";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv6 armv7";
 				WRAPPER_EXTENSION = app;
@@ -3566,8 +3591,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Prize Per Day";
-				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Distribution: Prize Per Day";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Gaurav Goyal (345548CA2J)";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: Gaurav Goyal (345548CA2J)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -3578,8 +3603,8 @@
 				"INFOPLIST_FILE[sdk=*]" = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "E6EB127F-BB53-4E51-8DAA-094B4F6CC3B4";
-				"PROVISIONING_PROFILE[sdk=*]" = "E6EB127F-BB53-4E51-8DAA-094B4F6CC3B4";
+				PROVISIONING_PROFILE = "881F0958-ED1C-43C4-B298-4A67396F5F19";
+				"PROVISIONING_PROFILE[sdk=*]" = "881F0958-ED1C-43C4-B298-4A67396F5F19";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -3589,15 +3614,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Sweepstakes/Sweepstakes.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Souvik Ghosh";
-				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Distribution: Souvik Ghosh";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Souvik Ghosh";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos6.1]" = "iPhone Distribution: Souvik Ghosh";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Gaurav Goyal (345548CA2J)";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: Gaurav Goyal (345548CA2J)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Gaurav Goyal (345548CA2J)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos6.1]" = "iPhone Developer: Gaurav Goyal (345548CA2J)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 					"\"$(SRCROOT)/Sweepstakes\"",
 					"\"$(SRCROOT)/Sweepstakes/Resourse\"",
+					"\"$(SRCROOT)/../../../../../Data Disk 2/Parse.com SDKs\"",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
 				);
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -3623,15 +3650,15 @@
 				);
 				LLVM_LTO = NO;
 				New_Setting = "";
+				ORDER_FILE = "";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
 				);
 				PRODUCT_NAME = Sweepstakes;
-				PROVISIONING_PROFILE = "235D71F5-B2FD-41FB-8517-E8D310108736";
-				"PROVISIONING_PROFILE[sdk=*]" = "235D71F5-B2FD-41FB-8517-E8D310108736";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "235D71F5-B2FD-41FB-8517-E8D310108736";
-				"PROVISIONING_PROFILE[sdk=iphoneos6.1]" = "235D71F5-B2FD-41FB-8517-E8D310108736";
+				PROVISIONING_PROFILE = "881F0958-ED1C-43C4-B298-4A67396F5F19";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "881F0958-ED1C-43C4-B298-4A67396F5F19";
+				"PROVISIONING_PROFILE[sdk=iphoneos6.1]" = "881F0958-ED1C-43C4-B298-4A67396F5F19";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv6 armv7";
 				WRAPPER_EXTENSION = app;
@@ -3649,7 +3676,7 @@
 				7CCF2915161097D400723C9F /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Distribution;
+			defaultConfigurationName = Release;
 		};
 		7CCC443A15F4909E001A0E09 /* Build configuration list for PBXNativeTarget "Sweepstakes" */ = {
 			isa = XCConfigurationList;
@@ -3659,7 +3686,7 @@
 				7CCF2916161097D400723C9F /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Distribution;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
