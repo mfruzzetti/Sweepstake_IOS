@@ -7,6 +7,7 @@
 //
 
 #import "MyprofileViewController.h"
+#import "Parse/Parse.h"
 
 @interface MyprofileViewController ()
 
@@ -165,6 +166,11 @@ float x;
         //Let's make a server call to update the location in the server
         [mc updateUserLocationFor:userid withCity:placemark.locality withState:placemark.administrativeArea];
         
+        //subscribe location channel on parse
+        if ([placemark.country length] > 0) {
+            [self performSelector:@selector(subscribeChannelOnParse:) withObject:placemark.country];
+        }
+        
          [geocoder release];
     }];
 
@@ -198,6 +204,35 @@ float x;
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
     NSLog(@"locationManager:%@ didFailWithError:%@", manager, error);
+}
+
+#pragma subscribe location channel on parse
+-(void)subscribeChannelOnParse :(NSString *)location{
+    
+    //subscribe the channel
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setDeviceToken:DELEGATE.tokenstring];
+    NSMutableArray *channelsArr = [currentInstallation.channels mutableCopy];
+    
+    NSMutableArray *tempArray = [[NSMutableArray alloc] init];
+    if ([channelsArr count] == 0) {
+        [tempArray addObject:location];
+    }else{
+    
+        [channelsArr addObject:location];
+        [currentInstallation removeObjectForKey:@"channels"];
+       
+        for (id item in channelsArr){
+            if (![tempArray containsObject:item])
+                [tempArray addObject:item];
+        }
+    }
+    
+    NSLog(@"channels with location :- %@",tempArray);
+    
+    [currentInstallation addObjectsFromArray:tempArray forKey:@"channels"];
+    [currentInstallation saveInBackground];
+    
 }
 
 // this delegate is called when the reverseGeocoder finds a placemark
@@ -459,6 +494,7 @@ float x;
         {
             //City and state available from server, let's set it
             lblLocation.text = [NSString stringWithFormat:@"%@, %@", strCity, strState];
+            [locationManager stopUpdatingLocation];
         }
         else{
             [locationManager startUpdatingLocation];
