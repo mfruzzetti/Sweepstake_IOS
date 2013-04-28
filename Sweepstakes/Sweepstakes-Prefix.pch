@@ -17,7 +17,6 @@
 #define API_PATH @"http://sweepstakesapp.com/api"
 #define IMGPATH @"http://sweepstakesapp.com/"
 
-
 #define Twiiter_ConsumerKey @"07ky0EIHVg6M7J2fo9D7uQ"
 #define Twiiter_ConsumerSecretKey @"lYBVmE6AWojQHgt1G6rIfWHOlwiifjOAgtPhskF4Sus"
 //#define Facebook_id @"372084682874416"
