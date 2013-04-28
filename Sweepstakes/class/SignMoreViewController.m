@@ -7,6 +7,7 @@
 //
 
 #import "SignMoreViewController.h"
+#import "Parse/Parse.h"
 
 @interface SignMoreViewController ()
 
@@ -181,9 +182,12 @@
         NSLog(@"%@",myArray);
         [dc setData:[NSMutableArray arrayWithArray:myArray]];
                 DELEGATE.nCurrentListItem = CURRENT_LIST_ITEM_SWEEP_STAKES_LIST;
+        
+        //subscribe the channel
+        [self performSelector:@selector(subscribeChannelOnParse)];
+        
         SweepListViewController *gotosweeplist = [[SweepListViewController alloc]initWithNibName:@"SweepListViewController" bundle:nil];
         gotosweeplist.usrid = [[dc getData]objectAtIndex:0];
-        
         [self.navigationController pushViewController:gotosweeplist animated:YES];
     }else {
         UIAlertView *al = [[UIAlertView alloc] initWithTitle:@"" message:[results valueForKey:@"message"] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
@@ -192,6 +196,77 @@
     }
     
   
+}
+
+#pragma subscribe channel on parse
+-(void)subscribeChannelOnParse{
+    
+    NSString *genderStr = nil;
+    //subscribe the channel
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setDeviceToken:DELEGATE.tokenstring];
+    if ([gender isEqualToString:@"F"]) {
+        genderStr = @"Female";
+    }else if ([gender isEqualToString:@"M"]) {
+        genderStr = @"Male";
+    }
+    //add channels on array
+    [currentInstallation addObjectsFromArray:[NSArray arrayWithObjects:genderStr, [self performSelector:@selector(age:) withObject:dobStr], nil] forKey:@"channels"];
+    [currentInstallation saveInBackground];
+    
+}
+
+#pragma Calculate age range
+- (NSString *)ageRange:(NSString *)ageStr {
+
+    NSString *range = nil;
+    NSInteger age = [ageStr integerValue];
+    
+    if (age < 18) {
+        range = @"Less18";
+    }else if (age >= 18 && age <= 24) {
+        range = @"Under24";
+    }else if (age >= 25 && age <= 30) {
+        range = @"Under30";
+    }else if (age >= 31 && age <= 36) {
+        range = @"Under36";
+    }else if (age >= 37 && age <= 44) {
+        range = @"Under44";
+    }else if (age >= 45 && age <= 54) {
+        range = @"Under54";
+    }else if (age >= 55 && age <= 64) {
+        range = @"Under64";
+    }else if (age >= 65) {
+        range = @"More65";
+    }
+    
+    NSLog(@"age := %d  range := %@",age, range);
+    
+    return range;
+}
+
+#pragma Calculate user age from date of birth
+- (NSString *)age:(NSString *)birthDateStr {
+    
+    NSInteger age;
+    
+    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+    [df setDateFormat:@"yyyy-MM-dd"];
+    NSDate *birthDate = [df dateFromString: birthDateStr];
+    [df release];
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    unsigned unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit;
+    NSDateComponents *dateComponentsNow = [calendar components:unitFlags fromDate:[NSDate date]];
+    NSDateComponents *dateComponentsBirth = [calendar components:unitFlags fromDate:birthDate];
+    
+    if (([dateComponentsNow month] < [dateComponentsBirth month]) ||
+        (([dateComponentsNow month] == [dateComponentsBirth month]) && ([dateComponentsNow day] < [dateComponentsBirth day]))) {
+        age = [dateComponentsNow year] - [dateComponentsBirth year] - 1;
+    } else {
+        age = [dateComponentsNow year] - [dateComponentsBirth year];
+    }
+    
+    return [self performSelector:@selector(ageRange:) withObject:[NSString stringWithFormat:@"%d",age]];
 }
 
 #pragma mark - UITextField Delegate
