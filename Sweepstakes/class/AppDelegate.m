@@ -44,8 +44,15 @@
     data.adOrientation   = VGAdOrientationPortrait;
     //  data.locationEnabled = TRUE;
     
-    // start vungle publisher library
-    [VGVunglePub startWithPubAppID:appID userData:data];
+    @try {
+        // start vungle publisher library
+        [VGVunglePub startWithPubAppID:appID userData:data];
+        
+    } @catch (NSException *exception) {
+        NSLog(@"%@",exception.description);
+    }
+    
+    
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -161,7 +168,6 @@
                       clientKey:@"kiGqEPQuq2GPn2GSM1uz2SS1jwARAsd4gvlgaFKJ"];
         //To track statistics around application opens
         [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
-        
         
         self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
         // Override point for customization after application launch.
@@ -450,7 +456,7 @@
                               forCredentials:credentialsToken];
         
     } @catch (NSException *exception) {
-        
+        NSLog(@"exception :- %@",exception.description);
     }
 }
 
