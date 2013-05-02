@@ -228,8 +228,6 @@ float x;
         }
     }
     
-    NSLog(@"channels with location :- %@",tempArray);
-    
     [currentInstallation addObjectsFromArray:tempArray forKey:@"channels"];
     [currentInstallation saveInBackground];
     
