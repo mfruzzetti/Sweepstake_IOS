@@ -223,24 +223,22 @@
     NSInteger age = [ageStr integerValue];
     
     if (age < 18) {
-        range = @"Less18";
+        range = @"Age_Less-18";
     }else if (age >= 18 && age <= 24) {
-        range = @"Under24";
+        range = @"Age_18-24";
     }else if (age >= 25 && age <= 30) {
-        range = @"Under30";
+        range = @"Age_25-30";
     }else if (age >= 31 && age <= 36) {
-        range = @"Under36";
+        range = @"Age_31-36";
     }else if (age >= 37 && age <= 44) {
-        range = @"Under44";
+        range = @"Age_37-44";
     }else if (age >= 45 && age <= 54) {
-        range = @"Under54";
+        range = @"Age_45-54";
     }else if (age >= 55 && age <= 64) {
-        range = @"Under64";
+        range = @"Age_55-64";
     }else if (age >= 65) {
-        range = @"More65";
+        range = @"Age_Over-65";
     }
-    
-    NSLog(@"age := %d  range := %@",age, range);
     
     return range;
 }
