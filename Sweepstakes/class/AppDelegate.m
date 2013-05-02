@@ -163,12 +163,12 @@
 	}
     else {
         
-        //Set parse application id and client key
+        //Set parse application id and client key+
         [Parse setApplicationId:@"PBfg87M0UsWl3fCsd7dCz9iHQ7aoYGiJoIDfKFWo"
                       clientKey:@"kiGqEPQuq2GPn2GSM1uz2SS1jwARAsd4gvlgaFKJ"];
         //To track statistics around application opens
         [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
-        
+               
         self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
         // Override point for customization after application launch.
         self.splashview = [[[SplashViewController alloc] initWithNibName:@"SplashViewController" bundle:nil] autorelease];
@@ -223,6 +223,9 @@
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
     [dc =[LLDataControll alloc]init];
+    
+    NSLog(@"userInfo :- %@",userInfo);
+    
     for (id key in userInfo) {
         //  NSLog(@"key: %@, value: %@", key, [userInfo objectForKey:key]);
         
